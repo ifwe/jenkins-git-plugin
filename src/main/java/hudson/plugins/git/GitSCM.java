@@ -620,7 +620,7 @@ public class GitSCM extends GitSCMBackwardCompatibility {
                 }
                 fetch.execute();
             } catch (GitException ex) {
-                throw new GitException("Failed to fetch from "+url.toString(), ex);
+                throw new IOException("Failed to fetch from "+url.toString(), ex);
             }
         }
     }
